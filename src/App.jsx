@@ -12,7 +12,7 @@ function App() {
             {[...Array(90)].map((_, x) =>
               <tr key={x}>
                 {<td>{x%5==0?x:''}</td>}
-                {[...Array(52)].map((_, y) => <td key={`${x}-${y}`} data={x*52+y === Math.round(consumedWeeks) ? "latest": null} style={{ backgroundColor: x*52+y <= consumedWeeks ? 'rgba(255, 255, 255, 0.87)' : 'none'}}></td>)}
+                {[...Array(52)].map((_, y) => <td key={`${x}-${y}`} data={x*52+y === Math.round(consumedWeeks) ? 'latest': null} style={{ backgroundColor: x*52+y <= consumedWeeks ? 'rgba(255, 255, 255, 0.87)' : 'none'}}></td>)}
               </tr>
             )}
           </tbody>
